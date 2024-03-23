@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { CountdownService } from './countdown.service';
 import { ScoreService} from "./score.service";
 import { SyllableService} from "./syllable.service";
@@ -23,7 +23,7 @@ export class AppComponent {
   constructor(
     private countdownService: CountdownService,
     private syllableService: SyllableService,
-    private scoreService: ScoreService // Injection du service ScoreService
+    private scoreService: ScoreService
   ) {
     this.gameOverSubscription = this.countdownService.gameOver$.subscribe(() => {
       this.onGameOver();
@@ -31,6 +31,8 @@ export class AppComponent {
 
     this.backToMenu();
   }
+
+  currentSyllable: string = this.syllableService.getCurrentSyllable();
 
   gameState: GameState = GameState.Menu;
 
@@ -42,6 +44,8 @@ export class AppComponent {
 
     this.syllableService.generateRandomSyllable();
   }
+
+
 
   onGameOver() {
     this.gameState = GameState.Score;

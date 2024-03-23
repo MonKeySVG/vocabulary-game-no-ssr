@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +35,14 @@ export class FrenchDictionaryService {
     const normalizedWord = this.normalizeWord(word.trim().toLowerCase());
     // Vérifiez si le mot normalisé est présent dans l'ensemble de mots français
     return this.frenchWords.has(normalizedWord);
+  }
+
+  getFrenchWordsWithSyllable(syllable: string): Observable<string[]>{
+    // Convertissez l'ensemble de mots en tableau avant de filtrer
+    const frenchWordsArray = Array.from(this.frenchWords);
+    // Filtrer la liste des mots pour ne retourner que ceux qui contiennent la syllabe
+    const filteredWords = frenchWordsArray.filter(word => word.includes(syllable));
+    // Retourner les mots filtrés sous forme d'observable
+    return of(filteredWords);
   }
 }

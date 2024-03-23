@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { ScoreComponent } from './score/score.component';
+import { PossibleWordsComponent } from './possible-words/possible-words.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ScoreComponent } from './score/score.component';
     HeaderComponent,
     MainMenuComponent,
     CountdownComponent,
-    ScoreComponent
+    ScoreComponent,
+    PossibleWordsComponent,
   ],
   imports: [
     BrowserModule,

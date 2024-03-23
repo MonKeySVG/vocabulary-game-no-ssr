@@ -1,0 +1,17 @@
+.possible-words {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.word-columns {
+
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.word {
+  margin-right: 10px; /* Espacement entre les mots */
+}

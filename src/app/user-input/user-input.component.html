@@ -1,0 +1,7 @@
+<div class="input-display">
+  <h2>{{userInput}}</h2>
+</div>
+
+<div class="user-input">
+  <input id="userInput" type="text" placeholder="Entrez votre réponse ici..." [(ngModel)]="userInput" (keydown.enter)="onEnter()" autofocus autocomplete="off">
+</div>

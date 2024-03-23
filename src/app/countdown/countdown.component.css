@@ -1,0 +1,6 @@
+.countdown-bar {
+  height: 5px;
+  background-color: var(--first-color);
+  transition: width 0.3s ease;
+  margin-bottom: 4rem;
+}

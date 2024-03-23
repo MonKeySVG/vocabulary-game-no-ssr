@@ -1,18 +1,36 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SyllableComponent } from './syllable/syllable.component';
+import { UserInputComponent } from './user-input/user-input.component';
+import {FormsModule} from "@angular/forms";
+import { HeaderComponent } from './header/header.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
+import { CountdownComponent } from './countdown/countdown.component';
+import { ScoreComponent } from './score/score.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SyllableComponent,
+    UserInputComponent,
+    HeaderComponent,
+    MainMenuComponent,
+    CountdownComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

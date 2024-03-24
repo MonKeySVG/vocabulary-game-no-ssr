@@ -26,3 +26,8 @@
   display: flex;
   gap: 3rem;
 }
+
+.score-display {
+  display: flex;
+  gap: 50px;
+}

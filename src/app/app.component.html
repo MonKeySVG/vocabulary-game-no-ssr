@@ -11,7 +11,11 @@
 </div>
 
 <div *ngIf="gameState === GameState.Score" class="game-over">
-  <h1>Score : <app-score></app-score></h1>
+  <div class="score-display">
+    <h1>Score : </h1>
+    <h1><app-score></app-score></h1>
+  </div>
+
   <!-- Autres éléments à afficher lorsque le jeu est terminé -->
   <div class="buttons">
     <button (click)="backToMenu()">Menu</button>

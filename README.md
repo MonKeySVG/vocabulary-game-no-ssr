@@ -2,7 +2,7 @@
 
 ## Description du projet
 
-Ce projet est un jeu de vocabulaire qui génère des syllabes aléatoires. Le but est d'écrire un mot de la langue française qui contient cette syllabe avant la fin du compte a rebours.
+Ce projet est un jeu de vocabulaire qui génère des syllabes aléatoires. Le but est d'écrire un mot de la langue française qui contient cette syllabe avant la fin du compte a rebours et cela le plus de fois possible. Les points sont calculé en fonction du nombre de lettre dans le mot entré par le joueur.
 
 ## Technologies utilisées
 
